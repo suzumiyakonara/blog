@@ -1,12 +1,8 @@
 {% if theme.leancloud_visitors.enable %}
 
   {# custom analytics part create by xiamo #}
-  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.10.1/dist/av-min.js"></script>
-  <script>AV.init({
-    appId: {{theme.leancloud_visitors.app_id}},
-    appKey: {{theme.leancloud_visitors.app_key}}
-    });
-  </script>
+  <script src="//cdn1.lncld.net/static/js/3.3.1/av-min.js"></script>
+  <script>AV.initialize("{{theme.leancloud_visitors.app_id}}", "{{theme.leancloud_visitors.app_key}}");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
